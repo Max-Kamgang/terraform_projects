@@ -1,7 +1,8 @@
 // EC2 instance Code
 resource "aws_instance" "server" {
   ami                    = "ami-045269a1f5c90a6a0"
-  instance_type          = "t3.micro"
+  
+  instance_type          = "t4.micro"
   availability_zone      = "us-east-1a"
   subnet_id              = aws_subnet.public1.id
   vpc_security_group_ids = [aws_security_group.mysg.id]
